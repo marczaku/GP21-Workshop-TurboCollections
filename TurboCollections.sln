@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboCollections", "TurboCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagement", "CustomerManagement\CustomerManagement.csproj", "{11E78E9F-5A65-4EB2-9CEC-8BF1E97BD1B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboCollections.Test", "TurboCollections.Test\TurboCollections.Test.csproj", "{B88C77A8-00CE-4116-AF90-641A362FF887}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{11E78E9F-5A65-4EB2-9CEC-8BF1E97BD1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11E78E9F-5A65-4EB2-9CEC-8BF1E97BD1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11E78E9F-5A65-4EB2-9CEC-8BF1E97BD1B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88C77A8-00CE-4116-AF90-641A362FF887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88C77A8-00CE-4116-AF90-641A362FF887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88C77A8-00CE-4116-AF90-641A362FF887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88C77A8-00CE-4116-AF90-641A362FF887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
