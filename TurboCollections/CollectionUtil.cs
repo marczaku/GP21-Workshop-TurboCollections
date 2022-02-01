@@ -15,10 +15,8 @@ namespace TurboCollections
             
             // create new array
             T[] newArray = new T[newSize];
-            for (int i = 0; i < items.Length; i++)
-            { // copy old items
-                newArray[i] = items[i];
-            }
+            // copy old items
+            Array.Copy(items, newArray, items.Length);
             // assign new array
             items = newArray;
         }

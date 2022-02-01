@@ -9,6 +9,16 @@ namespace TurboCollections
         public int Count { get; private set; }
         private T[] items = Array.Empty<T>();
 
+        public TurboList()
+        {
+            
+        }
+        
+        public TurboList(int capacity)
+        {
+            items = new T[capacity];
+        }
+        
         public void Add(T item)
         {
             CollectionUtil.EnsureSize(ref items, Count + 1);
@@ -25,6 +35,11 @@ namespace TurboCollections
             items[index] = item;
         }
 
+        public void Swap(int indexA, int indexB)
+        {
+            (items[indexB], items[indexA]) = (items[indexA], items[indexB]);
+        }
+
         public void Clear()
         {
             for (int i = 0; i < Count; i++)
@@ -36,10 +51,7 @@ namespace TurboCollections
 
         public void RemoveAt(int index)
         {
-            for (int i = index; i < Count - 1; i++)
-            {
-                items[i] = items[i + 1];
-            }
+            Array.Copy(items, index + 1, items, index, Count - index - 1);
             Count--;
         }
 

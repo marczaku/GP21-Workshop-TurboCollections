@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using TurboCollections;
 
 namespace CustomerManagement
@@ -7,17 +9,19 @@ namespace CustomerManagement
     {
         static void Main(string[] args)
         {
-            var turboList = new TurboList<float>();
-            turboList.Add(3f);
-            turboList.Add(-7f);
-            turboList.Add(1337f);
-            turboList.Add(1337f);
-            turboList.RemoveAt(1);
-
-            foreach (var item in turboList)
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            var turboList = new List<float>(100000);
+            for (var i = 0; i < 100000; i++)
             {
-                Console.WriteLine(item);
+                turboList.Add(i);
             }
+            for (var i = 0; i < 100000; i++)
+            {
+                turboList.Remove(i);
+            }
+
+            Console.WriteLine(stopwatch.ElapsedTicks);
         }
     }
 }
